@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Krutika &amp; Ishant - Wedding</title>
+  <title>Krutika weds Ishant</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Wedding celebration of Krutika and Ishant on 3 February 2026 at Elysium Estate, Apta, Raigad." />
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+
     :root {
       --primary: #d4a574;
       --primary-dark: #b5895b;
@@ -45,8 +47,8 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      background: linear-gradient(135deg, rgba(212,165,116,0.9), rgba(181,137,91,0.8)),
-                  url("https://images.pexels.com/photos/1730877/pexels-photo-1730877.jpeg?auto=compress&cs=tinysrgb&w=1600") center/cover;
+      background: linear-gradient(135deg, rgba(212,165,116,0.85), rgba(181,137,91,0.85)),
+                  url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80") center center/cover no-repeat fixed;
       color: white;
       padding: 2rem 1rem;
     }
@@ -56,12 +58,13 @@
     }
 
     .hero-names {
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: clamp(2.5rem, 8vw, 5rem);
-      font-weight: 400;
-      letter-spacing: 0.1em;
-      margin-bottom: 0.5rem;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 8vw, 5.5rem);
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      margin-bottom: 0.75rem;
+      text-shadow: 0 3px 8px rgba(0,0,0,0.6);
+      text-transform: uppercase;
     }
 
     .hero-amp {
@@ -70,16 +73,19 @@
     }
 
     .hero-date {
-      font-size: clamp(1.1rem, 3vw, 1.6rem);
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
       font-weight: 300;
       margin: 1rem 0 1.5rem;
       letter-spacing: 0.15em;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+      text-transform: uppercase;
     }
 
     .hero-venue {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       opacity: 0.95;
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
+      text-shadow: 0 1px 6px rgba(0,0,0,0.55);
     }
 
     .hero-buttons {
@@ -90,13 +96,16 @@
     }
 
     .btn {
-      padding: 1rem 2rem;
+      padding: 1rem 2.2rem;
       border: 2px solid white;
       border-radius: 50px;
-      font-weight: 500;
-      letter-spacing: 0.05em;
+      font-weight: 600;
+      letter-spacing: 0.07em;
       transition: all 0.3s ease;
       backdrop-filter: blur(10px);
+      text-transform: uppercase;
+      font-size: 1.05rem;
+      cursor: pointer;
     }
 
     .btn-primary {
@@ -133,10 +142,12 @@
     }
 
     .nav-brand {
-      font-family: "Playfair Display", serif;
+      font-family: 'Playfair Display', serif;
       font-size: 1.3rem;
-      font-weight: 400;
+      font-weight: 700;
       color: var(--primary-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
     }
 
     .nav-links {
@@ -146,9 +157,12 @@
     }
 
     .nav-links a {
-      font-weight: 500;
+      font-weight: 600;
       color: var(--muted);
       transition: color 0.3s ease;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
     }
 
     .nav-links a:hover {
@@ -171,12 +185,13 @@
     }
 
     .section-title {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
       text-align: center;
       margin-bottom: 1rem;
       color: var(--primary-dark);
-      letter-spacing: 0.05em;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
     }
 
     .section-subtitle {
@@ -223,9 +238,9 @@
     }
 
     .day-number {
-      font-family: "Playfair Display", serif;
+      font-family: 'Playfair Display', serif;
       font-size: 2.5rem;
-      font-weight: 400;
+      font-weight: 700;
       color: var(--primary-dark);
       min-width: 80px;
       text-align: center;
@@ -256,11 +271,11 @@
       font-weight: 700;
       color: var(--primary-dark);
       min-width: 100px;
-      font-family: "Playfair Display", serif;
+      font-family: 'Playfair Display', serif;
     }
 
     .event-details h4 {
-      font-family: "Playfair Display", serif;
+      font-family: 'Playfair Display', serif;
       font-size: 1.2rem;
       margin-bottom: 0.25rem;
       color: var(--primary-dark);
@@ -385,7 +400,7 @@
   <header class="hero">
     <div class="hero-content">
       <h1 class="hero-names">
-        Krutika<span class="hero-amp">&amp;</span>Ishant
+        Krutika <span class="hero-amp">&amp;</span> Ishant
       </h1>
       <div class="hero-date">Tuesday, 3 February 2026</div>
       <div class="hero-venue">Elysium Estate, Apta Road, Ladeewali Village, Raigad</div>
