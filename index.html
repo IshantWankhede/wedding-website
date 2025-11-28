@@ -4,605 +4,831 @@
   <meta charset="UTF-8" />
   <title>Krutika weds Ishant</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Wedding celebration of Krutika and Ishant with a tropical leaves watercolor theme on 3 February 2026 at Elysium Estate, Apta, Raigad." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+  <meta name="description" content="Wedding celebration of Krutika and Ishant. Main wedding 3 February 2026 at Elysium Estate, Apta. Reception 6 February 2026 at Nagpur." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
-    /* === Color Palette === */
     :root {
-      --primary-green: #4a755a;
-      --primary-light-green: #a3c5a0;
-      --accent-teal: #70968a;
-      --watercolor-bg: #f7f9f5;
-      --watercolor-stroke: #dce8db;
-      --text-color: #334634;
-      --text-muted: #7a8b6f;
-      --shadow-light: rgba(0, 0, 0, 0.1);
-      --shadow-dark: rgba(0, 0, 0, 0.18);
-      --border-radius: 24px;
+      --primary: #d4a574;
+      --primary-dark: #b5895b;
+      --accent: #f8e8d9;
+      --watercolor-gold: linear-gradient(135deg, #f4e1c1, #e8d2a6, #f9e8d1);
+      --watercolor-cream: linear-gradient(135deg, #fffdf9, #faf7f2, #f5f3ef);
+      --watercolor-blush: linear-gradient(135deg, #ffeef2, #f8e4e9, #f0e2e8);
+      --bg: #fffdfa;
+      --text: #2c2c2c;
+      --muted: #6b6b6b;
+      --border: rgba(212, 165, 116, 0.15);
+      --shadow: 0 35px 80px -20px rgba(0,0,0,0.12);
+      --shadow-light: 0 15px 40px -10px rgba(0,0,0,0.08);
+      --shadow-glow: 0 0 30px rgba(212, 165, 116, 0.15);
     }
 
-    /* === Typography === */
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      background: var(--watercolor-bg);
-      font-family: 'Inter', sans-serif;
-      color: var(--text-color);
-      line-height: 1.65;
-      min-height: 100vh;
+      padding: 0;
     }
 
-    h1, h2, h3, h4, h5 {
-      font-family: 'Playfair Display', serif;
-      color: var(--primary-green);
-    }
-
-    h1 {
-      font-weight: 700;
-      font-size: clamp(2.5rem, 6vw, 4.5rem);
-      letter-spacing: 0.05em;
-      margin-bottom: 0.2rem;
-      text-transform: capitalize;
-    }
-
-    h2 {
-      font-weight: 600;
-      font-size: clamp(1.8rem, 4vw, 3rem);
-      letter-spacing: 0.08em;
-      margin-bottom: 0.5rem;
-      border-bottom: 3px solid var(--primary-light-green);
-      padding-bottom: 0.5rem;
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--watercolor-cream);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
       position: relative;
-      max-width: 280px;
     }
 
-    h2::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 60px;
-      height: 3px;
-      background: var(--accent-teal);
-      border-radius: 3px;
-      opacity: 0.45;
-    }
-
-    p {
-      font-weight: 400;
-      font-size: 1rem;
-      color: var(--text-color);
-      margin: 0 0 1.25rem 0;
-    }
-
-    /* === Layout === */
-    #root {
-      max-width: 1000px;
-      margin: auto;
-      padding: 3rem 1.5rem 6rem;
-    }
-
-    /* === Background and decoration === */
+    /* Subtle watercolor background washes */
     body::before {
       content: '';
-      pointer-events: none;
       position: fixed;
-      top: -5%;
+      top: -20%;
       left: -10%;
-      width: 400px;
-      height: 400px;
-      background: url('https://i.ibb.co/FbwdXNQ/tropical-leaves-overlay.png') no-repeat center;
-      background-size: contain;
-      opacity: 0.15;
-      z-index: 0;
+      width: 60%;
+      height: 60%;
+      background: radial-gradient(ellipse 80% 50% at 20% 30%, rgba(248, 232, 217, 0.25) 0%, transparent 60%);
+      z-index: -2;
+      pointer-events: none;
     }
 
     body::after {
       content: '';
-      pointer-events: none;
       position: fixed;
-      bottom: -5%;
+      bottom: -10%;
       right: -15%;
-      width: 500px;
-      height: 500px;
-      background: url('https://i.ibb.co/zGhZ90d/watercolor-strokes2.png') no-repeat center;
-      background-size: contain;
-      opacity: 0.1;
-      z-index: 0;
+      width: 50%;
+      height: 50%;
+      background: radial-gradient(ellipse 70% 40% at 80% 70%, rgba(244, 225, 193, 0.2) 0%, transparent 60%);
+      z-index: -2;
+      pointer-events: none;
     }
 
-    /* === Hero Section === */
-    header {
+    a {
+      color: var(--primary-dark);
+      text-decoration: none;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding-top: 4rem;
-      margin-bottom: 4rem;
+      background: 
+        linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.05)),
+        url("https://images.pexels.com/photos/1730877/pexels-photo-1730877.jpeg?auto=compress&cs=tinysrgb&w=2000&h=1200&fit=crop") center center/cover no-repeat fixed;
+      color: white;
+      padding: 2rem 1rem;
       position: relative;
-      z-index: 1;
     }
 
-    .hero-couple {
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(0,0,0,0.4), rgba(0,0,0,0.25));
+      border-radius: 0 0 120px 120px;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-title {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(3rem, 12vw, 6rem);
-      color: var(--primary-green);
-      margin-bottom: 0.15rem;
-      font-weight: 700;
+      font-size: clamp(3.5rem, 10vw, 7rem);
+      font-weight: 800;
+      letter-spacing: 0.25em;
+      margin-bottom: 1rem;
+      text-shadow: 0 6px 25px rgba(0,0,0,0.8);
+      text-transform: uppercase;
+      line-height: 0.9;
+      background: var(--watercolor-gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      position: relative;
     }
 
-    .hero-subtxt {
-      font-size: clamp(1rem, 3vw, 1.3rem);
-      color: var(--accent-teal);
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      margin-bottom: 0.25rem;
+    .hero-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      height: 4px;
+      background: var(--watercolor-gold);
+      border-radius: 2px;
+      filter: blur(1px);
+      opacity: 0.6;
+    }
+
+    .hero-subtitle {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.4rem, 4vw, 2.2rem);
+      font-weight: 400;
+      margin: 1.5rem 0 2.5rem;
+      letter-spacing: 0.2em;
+      text-shadow: 0 3px 15px rgba(0,0,0,0.6);
+      opacity: 0.95;
       text-transform: uppercase;
     }
 
     .hero-location {
-      font-size: 1rem;
+      font-size: 1.3rem;
       font-weight: 400;
-      color: var(--text-muted);
-      margin-bottom: 1.5rem;
+      margin-bottom: 3.5rem;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+      letter-spacing: 0.08em;
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.15);
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 1.3rem 3rem;
+      border: 2px solid rgba(255,255,255,0.9);
+      border-radius: 60px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+      letter-spacing: 0.1em;
+      backdrop-filter: blur(25px);
+      background: rgba(255,255,255,0.12);
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      text-transform: uppercase;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary {
+      background: rgba(255,255,255,0.95);
+      color: var(--text);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: white;
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left 0.6s;
+    }
+
+    .btn:hover::before {
+      left: 100%;
+    }
+
+    .btn:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+      border-color: white;
+    }
+
+    /* Navigation */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(40px);
+      border-bottom: 1px solid rgba(212,165,116,0.2);
+      z-index: 1000;
+      padding: 1rem 0;
+      box-shadow: var(--shadow-light);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+      background: var(--watercolor-gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      color: var(--muted);
+      font-size: 0.95rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      position: relative;
+      padding-bottom: 8px;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-dark);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 50%;
+      background: var(--watercolor-gold);
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .nav-links a:hover::after {
+      width: 80%;
+    }
+
+    /* Main Content */
+    .main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 9rem 2rem 5rem;
+    }
+
+    .section {
+      margin-bottom: 9rem;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(20px);
+      padding: 4.5rem;
+      border-radius: 45px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: var(--watercolor-gold);
+      filter: blur(2px);
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 6.5vw, 4.8rem);
+      text-align: center;
+      margin-bottom: 1.8rem;
+      color: var(--text);
+      letter-spacing: 0.1em;
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 0.95;
+      background: var(--watercolor-gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      position: relative;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-size: 1.35rem;
+      color: var(--muted);
+      margin-bottom: 4.5rem;
+      max-width: 750px;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: 400;
       font-style: italic;
     }
 
-    .btn-group {
-      display: flex;
-      justify-content: center;
-      gap: 1.75rem;
-      margin-top: 2rem;
-      flex-wrap: wrap;
+    /* Itinerary */
+    .itinerary {
+      display: grid;
+      gap: 3.5rem;
     }
 
-    a.button {
-      display: inline-block;
-      background: var(--primary-light-green);
-      color: var(--primary-green);
-      padding: 1rem 2.75rem;
-      border-radius: var(--border-radius);
-      text-transform: uppercase;
-      font-weight: 600;
-      font-size: clamp(1rem, 3vw, 1.15rem);
-      letter-spacing: 0.1em;
-      text-decoration: none;
-      box-shadow: 0 6px 15px var(--shadow-light);
-      transition: all 0.3s ease;
-      backdrop-filter: blur(6px);
-    }
-
-    a.button:hover {
-      background: var(--accent-teal);
-      color: white;
-      box-shadow: 0 12px 25px var(--shadow-dark);
-      transform: translateY(-4px);
-    }
-
-    /* === Sections style === */
-    section {
-      margin-bottom: 6rem;
-      position: relative;
-      background: white;
-      padding: 3rem 4rem;
-      border-radius: var(--border-radius);
-      box-shadow: 0 35px 70px -25px var(--shadow-dark);
-      z-index: 5;
-    }
-
-    /* Tropical leaves border */
-    section::before {
-      content: '';
-      position: absolute;
-      left: 1.5rem;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 60px;
-      height: 140px;
-      background: url('https://i.ibb.co/6D4T1cQ/watercolor-leaf-top.png') no-repeat center;
-      background-size: contain;
-      opacity: 0.22;
-      z-index: -1;
-    }
-
-    section::after {
-      content: '';
-      position: absolute;
-      right: 2rem;
-      bottom: 20px;
-      width: 80px;
-      height: 160px;
-      background: url('https://i.ibb.co/5YV3XGL/watercolor-leaf-bottom.png') no-repeat center;
-      background-size: contain;
-      opacity: 0.18;
-      z-index: -1;
-    }
-
-    /* Remove leaves for first section’s before to avoid clutter on Hero */
-    section#itinerary::before {
-      display: none;
-    }
-
-
-    /* === Itinerary === */
     .itinerary-day {
-      margin-bottom: 3.5rem;
+      background: var(--watercolor-cream);
+      border-radius: 40px;
+      padding: 4.5rem;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .itinerary-day::before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 80px;
+      height: 80px;
+      background: radial-gradient(circle, rgba(212,165,116,0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      filter: blur(20px);
+    }
+
+    .itinerary-day:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 45px 100px -20px rgba(0,0,0,0.2);
     }
 
     .day-header {
       display: flex;
       align-items: center;
-      gap: 2rem;
-      margin-bottom: 1.8rem;
+      gap: 2.5rem;
+      margin-bottom: 3.5rem;
     }
 
     .day-number {
       font-family: 'Playfair Display', serif;
-      font-weight: 700;
-      font-size: 3rem;
-      color: var(--primary-green);
-      min-width: 75px;
-      border: 3px solid var(--primary-light-green);
+      font-size: 4rem;
+      font-weight: 800;
+      background: var(--watercolor-gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
-      padding: 1rem 0;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-glow);
+      border: 3px solid rgba(212,165,116,0.2);
+      backdrop-filter: blur(15px);
+      background: rgba(255,255,255,0.6);
     }
 
     .day-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       font-weight: 600;
-      color: var(--primary-green);
+      color: var(--text);
+      letter-spacing: 0.06em;
+    }
+
+    .events-list {
+      display: grid;
+      gap: 2.5rem;
     }
 
     .event {
       display: flex;
-      gap: 2rem;
-      margin-bottom: 1.5rem;
-      border-left: 4px solid var(--primary-light-green);
-      padding-left: 1rem;
+      gap: 2.5rem;
+      padding: 2.5rem;
+      background: var(--watercolor-blush);
+      border-radius: 30px;
+      border-left: 8px solid var(--primary);
+      transition: all 0.4s ease;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.06);
+    }
+
+    .event:hover {
+      background: var(--watercolor-gold);
+      transform: translateX(8px);
+      box-shadow: 0 20px 50px rgba(212,165,116,0.15);
     }
 
     .event-time {
       font-family: 'Playfair Display', serif;
-      font-weight: 600;
-      font-size: 1.2rem;
-      min-width: 105px;
-      color: var(--accent-teal);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      min-width: 140px;
+      padding: 1.5rem 2rem;
+      background: rgba(255,255,255,0.9);
+      border-radius: 20px;
+      box-shadow: var(--shadow-light);
+      text-align: center;
+      backdrop-filter: blur(15px);
     }
 
     .event-details h4 {
-      margin: 0 0 0.25rem;
       font-family: 'Playfair Display', serif;
-      font-weight: 700;
-      font-size: 1.3rem;
-      color: var(--primary-green);
+      font-size: 1.7rem;
+      margin-bottom: 0.8rem;
+      color: var(--primary-dark);
+      font-weight: 600;
     }
 
-    .event-details p {
+    .event-location {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin-top: 0.5rem;
       font-weight: 400;
-      color: var(--text-muted);
       font-style: italic;
-      font-size: 1rem;
     }
 
-    /* === Venue Section === */
+    /* Venue */
     .venue-grid {
-      display: flex;
-      gap: 3rem;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
     }
 
     .venue-card {
-      flex: 1 1 300px;
-      background: var(--accent-teal);
-      color: white;
-      padding: 2.5rem;
-      border-radius: var(--border-radius);
-      box-shadow: 0 25px 55px rgba(41,102,91,0.2);
+      background: var(--watercolor-cream);
+      padding: 4rem;
+      border-radius: 40px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      height: fit-content;
+      backdrop-filter: blur(15px);
     }
 
-    .venue-card h3 {
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-      font-size: 2rem;
-      margin-bottom: 1.25rem;
-      color: white;
-    }
-
-    .venue-card p, .venue-card ul, .venue-card li {
-      font-weight: 500;
-      font-size: 1.05rem;
-      line-height: 1.5;
-      letter-spacing: 0.03em;
-    }
-
-    .venue-card ul {
-      padding-left: 1.25rem;
-      margin-top: 0.75rem;
-    }
-
-    /* === Map === */
-    .venue-map-container {
-      flex: 1 1 400px;
-      border-radius: var(--border-radius);
+    .venue-map {
+      height: 380px;
+      border-radius: 30px;
       overflow: hidden;
-      box-shadow: 0 25px 60px rgba(41,102,91,0.25);
-      border: 3px solid var(--primary-light-green);
+      box-shadow: var(--shadow);
+      border: 2px solid var(--border);
+      transition: transform 0.3s ease;
     }
 
-    iframe.venue-map {
-      width: 100%;
-      height: 350px;
-      border: none;
-      display: block;
+    .venue-map:hover {
+      transform: scale(1.02);
     }
 
-    /* === RSVP Section === */
-    form.rsvp-form {
-      background: white;
-      padding: 3rem 3.5rem;
-      border-radius: var(--border-radius);
-      box-shadow: 0 30px 65px rgba(105,140,115,0.15);
-      max-width: 650px;
+    /* RSVP */
+    .rsvp-form {
+      max-width: 750px;
       margin: 0 auto;
+      background: var(--watercolor-cream);
+      padding: 5rem;
+      border-radius: 45px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(20px);
     }
 
     .form-group {
-      margin-bottom: 1.75rem;
+      margin-bottom: 2.5rem;
     }
 
-    label {
+    .form-group label {
       display: block;
+      margin-bottom: 1rem;
       font-weight: 600;
-      margin-bottom: 0.5rem;
-      font-size: 1.05rem;
-      color: var(--primary-green);
+      color: var(--text);
+      font-size: 1.1rem;
+      letter-spacing: 0.03em;
     }
 
-    input[type="text"], input[type="number"], textarea {
+    .form-group input,
+    .form-group textarea {
       width: 100%;
-      padding: 1rem 1.25rem;
-      border-radius: 14px;
-      border: 2px solid var(--primary-light-green);
-      font-family: "Inter", sans-serif;
-      font-weight: 500;
-      font-size: 1rem;
-      transition: border-color 0.25s ease;
-      background: var(--watercolor-bg);
-      color: var(--text-color);
-      resize: vertical;
+      padding: 1.5rem 2rem;
+      border: 2px solid var(--border);
+      border-radius: 25px;
+      font-size: 1.15rem;
+      font-family: inherit;
+      transition: all 0.4s ease;
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(10px);
     }
 
-    input[type="text"]:focus, input[type="number"]:focus, textarea:focus {
-      border-color: var(--primary-green);
+    .form-group input:focus,
+    .form-group textarea:focus {
       outline: none;
-      background: #f4fbf5;
-      box-shadow: 0 0 18px rgba(97,139,82,0.3);
+      border-color: var(--primary);
+      background: white;
+      box-shadow: var(--shadow-glow);
+      transform: translateY(-2px);
     }
 
     .checkbox-group {
       display: grid;
       gap: 1.25rem;
-      margin-top: 1rem;
+      margin-top: 1.25rem;
     }
 
     .checkbox-group label {
-      cursor: pointer;
-      font-weight: 500;
-      font-size: 1rem;
-      color: var(--primary-green);
       display: flex;
       align-items: center;
-      gap: 0.75rem;
-    }
-
-    button {
-      background-color: var(--primary-green);
-      color: white;
-      border: none;
-      border-radius: var(--border-radius);
-      padding: 1.3rem 3rem;
-      font-size: 1.25rem;
-      font-weight: 700;
-      cursor: pointer;
-      width: 100%;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      box-shadow: 0 10px 35px rgba(75,131,82,0.45);
-      transition: background-color 0.3s ease;
-      font-family: 'Playfair Display', serif;
-    }
-
-    button:hover {
-      background-color: var(--accent-teal);
-      box-shadow: 0 14px 40px rgba(72, 134, 102, 0.55);
-    }
-
-    /* === Footer === */
-    footer.footer {
-      text-align: center;
-      padding: 3rem 1rem;
-      color: var(--text-muted);
+      gap: 1.25rem;
       font-weight: 500;
-      font-size: 1rem;
-      font-style: italic;
-      letter-spacing: 0.05em;
-      user-select: none;
+      cursor: pointer;
+      padding: 1.25rem;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+      background: rgba(255,255,255,0.5);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border);
     }
 
-    /* === Responsive === */
-    @media (max-width: 900px) {
-      section {
-        padding: 2.5rem 2rem;
-      }
+    .checkbox-group label:hover {
+      background: var(--watercolor-blush);
+      transform: translateX(5px);
+    }
 
-      header {
-        padding-top: 3rem;
-      }
+    /* Submit Button */
+    .rsvp-submit {
+      width: 100%;
+      padding: 1.6rem;
+      background: var(--watercolor-gold);
+      color: var(--primary-dark);
+      border: none;
+      border-radius: 50px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-shadow: var(--shadow-glow);
+      transition: all 0.4s ease;
+      backdrop-filter: blur(20px);
+    }
 
-      h1 {
-        font-size: clamp(2.3rem, 12vw, 4rem);
-      }
+    .rsvp-submit:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 25px 60px rgba(212,165,116,0.3);
+    }
 
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 5rem 2rem 3rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      font-size: 1.1rem;
+      font-style: italic;
+      backdrop-filter: blur(10px);
+    }
+
+    @media (max-width: 768px) {
       .venue-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      
+      .nav-links {
+        display: none;
+      }
+      
+      .itinerary-day {
+        padding: 3rem 2rem;
+      }
+      
+      .event {
+        flex-direction: column;
+        gap: 2rem;
+      }
+      
+      .hero-buttons {
         flex-direction: column;
         align-items: center;
       }
-
-      .venue-card,
-      .venue-map-container {
-        width: 100%;
-        margin-bottom: 3rem;
+      
+      .main {
+        padding-top: 7rem;
       }
-
-      form.rsvp-form {
-        padding: 2rem;
+      
+      .section {
+        padding: 3rem 2rem;
       }
     }
   </style>
 </head>
 <body>
-  <main id="root" role="main" aria-label="Krutika and Ishant wedding website">
-    <header>
-      <h1 class="hero-couple">Krutika weds Ishant</h1>
-      <div class="hero-subtxt">Tuesday, 3 February 2026</div>
-      <p class="hero-location">Elysium Estate, Apta Road, Ladeewali Village, Raigad<br />Reception: 6 February 2026, Nagpur</p>
-      <div class="btn-group">
-        <a href="#itinerary" class="button">Wedding Itinerary</a>
-        <a href="#rsvp" class="button">RSVP</a>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Krutika weds Ishant</h1>
+      <div class="hero-subtitle">Tuesday, 3 February 2026</div>
+      <div class="hero-location">Elysium Estate, Apta Road, Ladeewali Village, Raigad<br>Reception: 6 February 2026, 7:00 PM, Nagpur</div>
+      <div class="hero-buttons">
+        <a href="#itinerary" class="btn btn-primary">Wedding Itinerary</a>
+        <a href="#rsvp" class="btn btn-secondary">RSVP</a>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <section id="itinerary" aria-labelledby="itinerary-title">
-      <h2 id="itinerary-title">Wedding Itinerary</h2>
-      <p>Complete celebration schedule across three locations</p>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <div class="nav-brand">Krutika weds Ishant</div>
+      <ul class="nav-links">
+        <li><a href="#itinerary">Itinerary</a></li>
+        <li><a href="#venue">Venue</a></li>
+        <li><a href="#rsvp">RSVP</a></li>
+      </ul>
+    </div>
+  </nav>
 
-      <div class="itinerary-day" role="region" aria-label="Itinerary for 2nd February">
-        <div class="day-header">
-          <div class="day-number" aria-hidden="true">02</div>
-          <div class="day-title">Monday, February 2026<br /><small style="font-weight: 400; color: var(--text-muted);">Elysium Estate, Apta</small></div>
-        </div>
-        <div class="event">
-          <div class="event-time">10:35 AM</div>
-          <div class="event-details">
-            <h4>Sakharpuda Ceremony</h4>
-            <p>Elysium Estate (Main Venue)</p>
+  <main class="main">
+    <!-- Wedding Itinerary -->
+    <section id="itinerary" class="section">
+      <h2 class="section-title">Wedding Itinerary</h2>
+      <p class="section-subtitle">A beautiful journey of celebration across Maharashtra</p>
+      
+      <div class="itinerary">
+        <div class="itinerary-day">
+          <div class="day-header">
+            <div class="day-number">02</div>
+            <div class="day-title">Monday, February 2026<br><span style="font-size:1.1rem; font-weight:400; color:var(--muted);">Elysium Estate, Apta</span></div>
+          </div>
+          
+          <div class="events-list">
+            <div class="event">
+              <div class="event-time">10:35 AM</div>
+              <div class="event-details">
+                <h4>Sakharpuda Ceremony</h4>
+                <div class="event-location">Elysium Estate (Main Venue)</div>
+              </div>
+            </div>
+            
+            <div class="event">
+              <div class="event-time">3:00 PM - 5:00 PM</div>
+              <div class="event-details">
+                <h4>Haldi Ceremony</h4>
+                <div class="event-location">Elysium Estate (Main Venue)</div>
+              </div>
+            </div>
+            
+            <div class="event">
+              <div class="event-time">7:00 PM - 11:00 PM</div>
+              <div class="event-details">
+                <h4>Sangeet Celebration</h4>
+                <div class="event-location">Elysium Estate (Main Venue)</div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="event">
-          <div class="event-time">3:00 PM - 5:00 PM</div>
-          <div class="event-details">
-            <h4>Haldi Ceremony</h4>
-            <p>Elysium Estate (Main Venue)</p>
-          </div>
-        </div>
-        <div class="event">
-          <div class="event-time">7:00 PM - 11:00 PM</div>
-          <div class="event-details">
-            <h4>Sangeet Night</h4>
-            <p>Elysium Estate (Main Venue)</p>
-          </div>
-        </div>
-      </div>
 
-      <div class="itinerary-day" role="region" aria-label="Itinerary for 3rd February">
-        <div class="day-header">
-          <div class="day-number" aria-hidden="true">03</div>
-          <div class="day-title">Tuesday, February 2026<br /><small style="font-weight: 400; color: var(--text-muted);">Elysium Estate, Apta</small></div>
-        </div>
-        <div class="event">
-          <div class="event-time">Morning</div>
-          <div class="event-details">
-            <h4>Wedding Preparations</h4>
-            <p>Elysium Estate</p>
+        <div class="itinerary-day">
+          <div class="day-header">
+            <div class="day-number">03</div>
+            <div class="day-title">Tuesday, February 2026<br><span style="font-size:1.1rem; font-weight:400; color:var(--muted);">Elysium Estate, Apta</span></div>
+          </div>
+          
+          <div class="events-list">
+            <div class="event">
+              <div class="event-time">Morning</div>
+              <div class="event-details">
+                <h4>Wedding Preparations</h4>
+                <div class="event-location">Elysium Estate</div>
+              </div>
+            </div>
+            
+            <div class="event">
+              <div class="event-time">Muhurta Time</div>
+              <div class="event-details">
+                <h4>Main Wedding Ceremony</h4>
+                <div class="event-location">Elysium Estate, Opposite Apta Station</div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="event">
-          <div class="event-time">Muhurta Time</div>
-          <div class="event-details">
-            <h4>Main Wedding Ceremony</h4>
-            <p>Elysium Estate, Opposite Apta Station</p>
-          </div>
-        </div>
-      </div>
 
-      <div class="itinerary-day" role="region" aria-label="Reception on 6th February">
-        <div class="day-header">
-          <div class="day-number" aria-hidden="true">06</div>
-          <div class="day-title">Friday, February 2026<br /><small style="font-weight: 400; color: var(--text-muted);">Nagpur Reception</small></div>
-        </div>
-        <div class="event">
-          <div class="event-time">7:00 PM</div>
-          <div class="event-details">
-            <h4>Wedding Reception</h4>
-            <p>Nagpur (Venue details to be announced)</p>
+        <div class="itinerary-day">
+          <div class="day-header">
+            <div class="day-number">06</div>
+            <div class="day-title">Friday, February 2026<br><span style="font-size:1.1rem; font-weight:400; color:var(--muted);">Nagpur Reception</span></div>
+          </div>
+          
+          <div class="events-list">
+            <div class="event">
+              <div class="event-time">7:00 PM</div>
+              <div class="event-details">
+                <h4>Grand Reception</h4>
+                <div class="event-location">Nagpur (Venue details coming soon)</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="venue" aria-labelledby="venue-title">
-      <h2 id="venue-title">Venue & Travel</h2>
-      <p>Three celebration locations across Maharashtra</p>
-
+    <!-- Venue & Travel -->
+    <section id="venue" class="section">
+      <h2 class="section-title">Venue & Travel</h2>
+      <p class="section-subtitle">Perfectly located venues, easily accessible from major cities</p>
+      
       <div class="venue-grid">
-        <div class="venue-card" role="region" aria-label="Elysium Estate">
-          <h3>Main Wedding - Elysium Estate</h3>
-          <h4>By Train</h4>
-          <p>Apta Station (APTA) - Right opposite venue. Panvel-Roha line connects from Mumbai CSMT.</p>
-          <h4>By Road</h4>
-          <ul>
-            <li><strong>Mumbai:</strong> 2-2.5 hours</li>
-            <li><strong>Navi Mumbai/Panvel:</strong> 45-60 minutes</li>
-            <li><strong>Pune:</strong> 3-3.5 hours</li>
-          </ul>
-          <h4>Nagpur Reception</h4>
-          <p>6 February 2026, 7:00 PM. Venue details coming soon.</p>
+        <div class="venue-card">
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 2.4rem; margin-bottom: 2.5rem; color: var(--primary-dark);">Getting Here</h3>
+          
+          <div style="margin-bottom: 2.5rem;">
+            <h4 style="font-family: 'Playfair Display', serif; font-weight: 600; margin-bottom: 1rem; color: var(--text);">By Train</h4>
+            <p style="color: var(--muted); line-height: 1.8;">Apta Station (APTA) - Right opposite venue. Panvel-Roha line connects from Mumbai CSMT.</p>
+          </div>
+          
+          <div style="margin-bottom: 2.5rem;">
+            <h4 style="font-family: 'Playfair Display', serif; font-weight: 600; margin-bottom: 1rem; color: var(--text);">By Road</h4>
+            <ul style="color: var(--muted); padding-left: 1.5rem; line-height: 1.8;">
+              <li><strong>Mumbai:</strong> 2-2.5 hours</li>
+              <li><strong>Navi Mumbai/Panvel:</strong> 45-60 minutes</li>
+              <li><strong>Pune:</strong> 3-3.5 hours</li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 style="font-family: 'Playfair Display', serif; font-weight: 600; margin-bottom: 1rem; color: var(--text);">Nagpur Reception</h4>
+            <p style="color: var(--muted); line-height: 1.8;">6 February 2026, 7:00 PM. Venue details coming soon.</p>
+          </div>
         </div>
-
-        <div class="venue-map-container" aria-label="Map to Elysium Estate" role="region">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3811.927!2d73.120!3d18.55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMThCsDMzJzAwLjIiTiA3M8KwMDcnMTIuMCJF!5e0!3m2!1sen!2sin!4v1732800000000" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="venue-map"></iframe>
+        
+        <div class="venue-card">
+          <p style="color: var(--muted); margin-bottom: 2rem; line-height: 1.7;">
+            Search "Elysium Estate Apta" for live directions and traffic updates
+          </p>
+          <iframe class="venue-map" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3811.927!2d73.120!3d18.55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMThCsDMzJzAwLjIiTiA3M8KwMDcnMTIuMCJF!5e0!3m2!1sen!2sin!4v1732800000000" 
+                  allowfullscreen="" 
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
       </div>
     </section>
 
-    <section id="rsvp" aria-labelledby="rsvp-title">
-      <h2 id="rsvp-title">RSVP</h2>
-      <p>Please confirm your attendance for wedding and/or reception</p>
-
-      <form class="rsvp-form" aria-describedby="rsvp-description">
+    <!-- RSVP -->
+    <section id="rsvp" class="section">
+      <h2 class="section-title">RSVP</h2>
+      <p class="section-subtitle">Please let us know if you'll be joining our celebrations</p>
+      
+      <form class="rsvp-form">
         <div class="form-group">
           <label for="name">Full Name</label>
-          <input id="name" name="name" type="text" autocomplete="name" required placeholder="Your full name" />
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required />
         </div>
+        
         <div class="form-group">
           <label for="guests">Number of Guests (including yourself)</label>
-          <input id="guests" name="guests" type="number" min="1" max="10" value="1" />
+          <input type="number" id="guests" name="guests" min="1" max="10" value="1" />
         </div>
-
+        
         <div class="form-group">
           <label>Events Attending</label>
-          <div class="checkbox-group" role="group" aria-label="Events attending checkboxes">
-            <label><input type="checkbox" name="events[]" value="sakharpuda" /> Sakharpuda (2 Feb, Apta)</label>
-            <label><input type="checkbox" name="events[]" value="haldi" /> Haldi (2 Feb, Apta)</label>
-            <label><input type="checkbox" name="events[]" value="sangeet" /> Sangeet (2 Feb, Apta)</label>
-            <label><input type="checkbox" name="events[]" value="wedding" checked /> Wedding (3 Feb, Apta)</label>
-            <label><input type="checkbox" name="events[]" value="reception" /> Reception (6 Feb, Nagpur)</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="events[]" value="sakharpuda"> Sakharpuda (2 Feb, Apta)</label>
+            <label><input type="checkbox" name="events[]" value="haldi"> Haldi (2 Feb, Apta)</label>
+            <label><input type="checkbox" name="events[]" value="sangeet"> Sangeet (2 Feb, Apta)</label>
+            <label><input type="checkbox" name="events[]" value="wedding" checked> Wedding Ceremony (3 Feb, Apta)</label>
+            <label><input type="checkbox" name="events[]" value="reception"> Reception (6 Feb, Nagpur)</label>
           </div>
         </div>
-
+        
         <div class="form-group">
           <label for="notes">Dietary Requirements / Special Notes</label>
-          <textarea id="notes" name="notes" rows="4" placeholder="Any allergies or preferences"></textarea>
+          <textarea id="notes" name="notes" rows="4" placeholder="Any food allergies, preferences, or special requirements?"></textarea>
         </div>
-
-        <button type="submit">Send My RSVP</button>
+        
+        <button type="submit" class="rsvp-submit">Send My RSVP</button>
       </form>
     </section>
   </main>
 
-  <footer class="footer" role="contentinfo">
-    <p>&copy; Krutika weds Ishant | 3 Feb 2026 (Apta) | 6 Feb 2026 (Nagpur Reception)</p>
+  <footer class="footer">
+    <p>Krutika &amp; Ishant | 3 February 2026 (Apta) | 6 February 2026 (Nagpur Reception)</p>
   </footer>
 </body>
 </html>
