@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Ishant &amp; Krutika - Wedding</title>
+  <title>Krutika &amp; Ishant - Wedding</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Wedding celebration of Ishant and Krutika on 3 February 2026 at Elysium Estate, Apta, Raigad." />
+  <meta name="description" content="Wedding celebration of Krutika and Ishant on 3 February 2026 at Elysium Estate, Apta, Raigad." />
   <style>
     :root {
-      --primary: #b56576;
-      --primary-dark: #8a4353;
-      --accent: #f6bd60;
-      --bg: #fff9f5;
-      --text: #333333;
-      --muted: #777777;
+      --primary: #d4a574;
+      --primary-dark: #b5895b;
+      --accent: #f8e8d9;
+      --bg: #faf7f4;
+      --text: #2c2c2c;
+      --muted: #6b6b6b;
+      --border: #e8e3dd;
     }
 
     * {
@@ -22,10 +23,10 @@
     }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     a {
@@ -37,617 +38,527 @@
       text-decoration: underline;
     }
 
-    header {
+    /* Hero */
+    .hero {
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.5)),
-                  url("https://images.pexels.com/photos/1730877/pexels-photo-1730877.jpeg?auto=compress&cs=tinysrgb&w=1600") center/cover no-repeat;
-      color: #ffffff;
-      padding: 2rem 1.5rem 3rem;
-      position: relative;
+      background: linear-gradient(135deg, rgba(212,165,116,0.9), rgba(181,137,91,0.8)),
+                  url("https://images.pexels.com/photos/1730877/pexels-photo-1730877.jpeg?auto=compress&cs=tinysrgb&w=1600") center/cover;
+      color: white;
+      padding: 2rem 1rem;
     }
 
-    header::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 120px;
-      height: 2px;
-      background: rgba(255,255,255,0.7);
-      border-radius: 999px;
-    }
-
-    .hero-inner {
-      max-width: 720px;
+    .hero-content {
+      max-width: 800px;
     }
 
     .hero-names {
-      font-family: "Georgia", "Times New Roman", serif;
-      font-size: 2.8rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 0.6rem;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     }
 
     .hero-amp {
-      font-size: 1.4rem;
+      font-size: 0.6em;
       vertical-align: middle;
-      margin: 0 0.3rem;
     }
 
-    .hero-tagline {
+    .hero-date {
+      font-size: clamp(1.1rem, 3vw, 1.6rem);
+      font-weight: 300;
+      margin: 1rem 0 1.5rem;
+      letter-spacing: 0.15em;
+    }
+
+    .hero-venue {
       font-size: 1.1rem;
-      margin-bottom: 1.5rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .hero-date,
-    .hero-location {
-      font-size: 1rem;
-      margin-bottom: 0.4rem;
-    }
-
-    .hero-date span,
-    .hero-location span {
-      font-weight: 600;
+      opacity: 0.95;
+      margin-bottom: 2rem;
     }
 
     .hero-buttons {
-      margin-top: 1.6rem;
       display: flex;
       flex-wrap: wrap;
+      gap: 1rem;
       justify-content: center;
-      gap: 0.75rem;
     }
 
     .btn {
-      display: inline-block;
-      padding: 0.7rem 1.6rem;
-      border-radius: 999px;
-      border: 2px solid #ffffff;
-      font-size: 0.95rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      background: transparent;
-      color: #ffffff;
-      cursor: pointer;
-      transition: all 0.2s ease;
+      padding: 1rem 2rem;
+      border: 2px solid white;
+      border-radius: 50px;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
     }
 
     .btn-primary {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: #2b2b2b;
+      background: white;
+      color: var(--primary-dark);
+    }
+
+    .btn-secondary {
+      background: transparent;
     }
 
     .btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.22);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     }
 
-    nav {
+    /* Navigation */
+    .nav {
       position: sticky;
       top: 0;
-      z-index: 10;
-      background: rgba(255,249,245,0.95);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid rgba(0,0,0,0.04);
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      z-index: 100;
     }
 
-    .nav-inner {
-      max-width: 980px;
+    .nav-container {
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 0.5rem 1.25rem;
+      padding: 1rem 2rem;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
     }
 
     .nav-brand {
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-size: 0.9rem;
+      font-family: "Playfair Display", serif;
+      font-size: 1.3rem;
+      font-weight: 400;
       color: var(--primary-dark);
     }
 
     .nav-links {
       display: flex;
-      gap: 1.2rem;
-      font-size: 0.9rem;
+      gap: 2rem;
+      list-style: none;
     }
 
     .nav-links a {
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
+      font-weight: 500;
       color: var(--muted);
+      transition: color 0.3s ease;
     }
 
     .nav-links a:hover {
       color: var(--primary-dark);
     }
 
-    main {
-      max-width: 980px;
+    /* Main Content */
+    .main {
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 2.5rem 1.25rem 4rem;
+      padding: 4rem 2rem;
     }
 
-    section {
-      padding: 2rem 0;
-      border-bottom: 1px solid rgba(0,0,0,0.04);
+    .section {
+      margin-bottom: 6rem;
     }
 
-    section:last-of-type {
-      border-bottom: none;
+    .section:last-child {
+      margin-bottom: 3rem;
     }
 
     .section-title {
-      font-family: "Georgia", "Times New Roman", serif;
-      font-size: 1.6rem;
-      margin-bottom: 0.6rem;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
       text-align: center;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
+      margin-bottom: 1rem;
       color: var(--primary-dark);
+      letter-spacing: 0.05em;
     }
 
     .section-subtitle {
       text-align: center;
-      margin-bottom: 1.6rem;
+      font-size: 1.2rem;
       color: var(--muted);
-      font-size: 0.95rem;
+      margin-bottom: 3rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .two-column {
+    /* Itinerary */
+    .itinerary {
       display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-      gap: 2.5rem;
-      align-items: start;
+      gap: 2rem;
     }
 
-    .card {
-      background: #ffffff;
-      border-radius: 16px;
-      padding: 1.3rem 1.4rem;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    .itinerary-day {
+      background: white;
+      border-radius: 24px;
+      padding: 3rem;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
     }
 
-    .muted {
-      color: var(--muted);
+    .itinerary-day::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+    }
+
+    .day-header {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .day-number {
+      font-family: "Playfair Display", serif;
+      font-size: 2.5rem;
+      font-weight: 400;
+      color: var(--primary-dark);
+      min-width: 80px;
+      text-align: center;
+    }
+
+    .day-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--text);
     }
 
     .events-list {
       display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      gap: 1rem;
+      gap: 1.5rem;
     }
 
     .event {
-      border-left: 3px solid var(--primary);
-      padding-left: 0.9rem;
+      display: flex;
+      gap: 1.5rem;
+      padding: 1.5rem;
+      background: var(--accent);
+      border-radius: 16px;
+      border-left: 5px solid var(--primary);
     }
 
-    .event-title {
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      font-size: 0.9rem;
-      margin-bottom: 0.15rem;
+    .event-time {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      min-width: 100px;
+      font-family: "Playfair Display", serif;
+    }
+
+    .event-details h4 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.2rem;
+      margin-bottom: 0.25rem;
       color: var(--primary-dark);
     }
 
-    .event-meta {
-      font-size: 0.9rem;
-      margin-bottom: 0.15rem;
-    }
-
-    .event-meta span {
-      font-weight: 600;
-    }
-
-    .event-note {
-      font-size: 0.85rem;
+    .event-location {
+      font-size: 0.95rem;
       color: var(--muted);
+      margin-top: 0.25rem;
+    }
+
+    /* Venue */
+    .venue-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .venue-card {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+      border: 1px solid var(--border);
     }
 
     .venue-map {
-      margin-top: 1rem;
-      border-radius: 12px;
+      height: 300px;
+      border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
     }
 
-    .venue-map iframe {
-      border: 0;
-      width: 100%;
-      height: 260px;
-    }
-
-    .faq-list {
-      list-style: none;
-      display: grid;
-      gap: 0.9rem;
-      font-size: 0.95rem;
-    }
-
-    .faq-q {
-      font-weight: 600;
-    }
-
-    .faq-a {
-      color: var(--muted);
-      margin-top: 0.15rem;
-    }
-
+    /* RSVP */
     .rsvp-form {
-      display: grid;
-      gap: 0.9rem;
-      max-width: 520px;
+      max-width: 600px;
       margin: 0 auto;
+      background: white;
+      padding: 3rem;
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.1);
     }
 
-    .field {
-      display: grid;
-      gap: 0.25rem;
-      font-size: 0.9rem;
+    .form-group {
+      margin-bottom: 1.5rem;
     }
 
-    .field label {
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
       font-weight: 600;
+      color: var(--text);
     }
 
-    .field input,
-    .field select,
-    .field textarea {
-      padding: 0.55rem 0.7rem;
-      border-radius: 8px;
-      border: 1px solid rgba(0,0,0,0.1);
-      font: inherit;
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
       width: 100%;
+      padding: 1rem;
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
     }
 
-    .field textarea {
-      min-height: 80px;
-      resize: vertical;
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--primary);
     }
 
-    .event-checkboxes {
+    .checkbox-group {
       display: grid;
-      gap: 0.25rem;
-      font-size: 0.9rem;
+      gap: 0.75rem;
+      margin-top: 0.5rem;
     }
 
-    .event-checkboxes label {
+    .checkbox-group label {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
       font-weight: 400;
+      cursor: pointer;
     }
 
-    footer {
+    /* Footer */
+    .footer {
       text-align: center;
-      padding: 1.6rem 1.25rem 2rem;
-      font-size: 0.8rem;
+      padding: 3rem 2rem;
       color: var(--muted);
+      border-top: 1px solid var(--border);
     }
 
-    @media (max-width: 720px) {
-      .hero-names {
-        font-size: 2.1rem;
+    @media (max-width: 768px) {
+      .venue-grid {
+        grid-template-columns: 1fr;
       }
-
-      .two-column {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .nav-inner {
-        flex-direction: column;
-        gap: 0.4rem;
-      }
-
+      
       .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.8rem;
+        display: none;
       }
-
-      main {
-        padding-top: 1.6rem;
+      
+      .itinerary-day {
+        padding: 2rem;
       }
-    }
-
-    html {
-      scroll-behavior: smooth;
+      
+      .event {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      
+      .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Hero -->
-  <header id="top">
-    <div class="hero-inner">
-      <div class="hero-tagline">The Wedding Of</div>
-      <div class="hero-names">
-        Ishant<span class="hero-amp">&amp;</span>Krutika
-      </div>
-      <p class="hero-date">
-        <span>Tuesday, 3 February 2026</span> · 03/02/2026
-      </p>
-      <p class="hero-location">
-        <span>Elysium Estate</span>, Apta Road, Ladeewali Village, Raigad, Maharashtra
-      </p>
-      <p class="hero-location">
-        Opposite Apta Station, near Lona Company
-      </p>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1 class="hero-names">
+        Krutika<span class="hero-amp">&amp;</span>Ishant
+      </h1>
+      <div class="hero-date">Tuesday, 3 February 2026</div>
+      <div class="hero-venue">Elysium Estate, Apta Road, Ladeewali Village, Raigad</div>
       <div class="hero-buttons">
-        <a href="#rsvp" class="btn btn-primary">RSVP</a>
-        <a href="#events" class="btn">View Events</a>
+        <a href="#itinerary" class="btn btn-primary">Wedding Itinerary</a>
+        <a href="#rsvp" class="btn btn-secondary">RSVP</a>
       </div>
     </div>
   </header>
 
-  <!-- Nav -->
-  <nav>
-    <div class="nav-inner">
-      <div class="nav-brand">Ishant &amp; Krutika</div>
-      <div class="nav-links">
-        <a href="#story">Story</a>
-        <a href="#events">Events</a>
-        <a href="#venue">Venue</a>
-        <a href="#faq">FAQ</a>
-        <a href="#rsvp">RSVP</a>
-      </div>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <div class="nav-brand">Krutika &amp; Ishant</div>
+      <ul class="nav-links">
+        <li><a href="#itinerary">Itinerary</a></li>
+        <li><a href="#venue">Venue</a></li>
+        <li><a href="#rsvp">RSVP</a></li>
+      </ul>
     </div>
   </nav>
 
-  <main>
-    <!-- Our Story -->
-    <section id="story">
-      <h2 class="section-title">Our Story</h2>
-      <p class="section-subtitle">
-        A small glimpse into our journey so far.
-      </p>
-      <div class="two-column">
-        <div>
-          <div class="card">
-            <p>
-              From the first conversation to countless shared memories, our journey has been filled with laughter, learning and a lot of chai. 
-              Surrounded by the love of our families and friends, we are excited to begin this next chapter together as husband and wife.
-            </p>
-            <p style="margin-top:0.7rem;">
-              We feel grateful to have you in our lives and cannot wait to celebrate with you at Elysium Estate on 3rd February 2026.
-            </p>
+  <main class="main">
+    <!-- Wedding Itinerary -->
+    <section id="itinerary" class="section">
+      <h2 class="section-title">Wedding Itinerary</h2>
+      <p class="section-subtitle">All celebrations at Elysium Estate, Apta Road, Raigad</p>
+      
+      <div class="itinerary">
+        <!-- Day 1: Monday, 2 February 2026 -->
+        <div class="itinerary-day">
+          <div class="day-header">
+            <div class="day-number">02</div>
+            <div class="day-title">Monday, February 2026</div>
+          </div>
+          
+          <div class="events-list">
+            <div class="event">
+              <div class="event-time">10:35 AM</div>
+              <div class="event-details">
+                <h4>Sakharpuda (Engagement)</h4>
+                <div class="event-location">Elysium Estate</div>
+              </div>
+            </div>
+            
+            <div class="event">
+              <div class="event-time">3:00 PM - 5:00 PM</div>
+              <div class="event-details">
+                <h4>Haldi Ceremony</h4>
+                <div class="event-location">Elysium Estate</div>
+              </div>
+            </div>
+            
+            <div class="event">
+              <div class="event-time">7:00 PM - 11:00 PM</div>
+              <div class="event-details">
+                <h4>Sangeet</h4>
+                <div class="event-location">Elysium Estate</div>
+              </div>
+            </div>
           </div>
         </div>
-        <div>
-          <div class="card">
-            <p class="muted">
-              You can add your favourite photos here – from your first trip, engagement, or pre‑wedding shoot. 
-              If you build this inside Wix, simply place an image gallery next to this story section.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Events -->
-    <section id="events">
-      <h2 class="section-title">Wedding Events</h2>
-      <p class="section-subtitle">
-        All functions will be held at Elysium Estate, Apta, Raigad.
-      </p>
-
-      <div class="events-list">
-        <!-- Sakharpuda -->
-        <div class="card event">
-          <div class="event-title">Sakharpuda (Engagement)</div>
-          <div class="event-meta">
-            <span>Date:</span> Monday, 2 February 2026
+        <!-- Day 2: Tuesday, 3 February 2026 -->
+        <div class="itinerary-day">
+          <div class="day-header">
+            <div class="day-number">03</div>
+            <div class="day-title">Tuesday, February 2026</div>
           </div>
-          <div class="event-meta">
-            <span>Time:</span> 10:35 AM
-          </div>
-          <div class="event-meta">
-            <span>Venue:</span> Elysium Estate (wedding venue)
-          </div>
-          <p class="event-note">
-            A traditional engagement ceremony to mark the beginning of the celebrations.
-          </p>
-        </div>
-
-        <!-- Haldi -->
-        <div class="card event">
-          <div class="event-title">Haldi Ceremony</div>
-          <div class="event-meta">
-            <span>Date:</span> Monday, 2 February 2026
-          </div>
-          <div class="event-meta">
-            <span>Time:</span> 3:00 PM – 5:00 PM
-          </div>
-          <div class="event-meta">
-            <span>Venue:</span> Elysium Estate (wedding venue)
-          </div>
-          <p class="event-note">
-            Join us for an afternoon filled with colour, turmeric and lots of laughter.
-          </p>
-        </div>
-
-        <!-- Sangeet -->
-        <div class="card event">
-          <div class="event-title">Sangeet</div>
-          <div class="event-meta">
-            <span>Date:</span> Monday, 2 February 2026
-          </div>
-          <div class="event-meta">
-            <span>Time:</span> 7:00 PM – 11:00 PM
-          </div>
-          <div class="event-meta">
-            <span>Venue:</span> Elysium Estate (wedding venue)
-          </div>
-          <p class="event-note">
-            An evening of music and dance where we hope to see your best moves on the floor.
-          </p>
-        </div>
-
-        <!-- Wedding Day -->
-        <div class="card event">
-          <div class="event-title">Wedding Ceremony</div>
-          <div class="event-meta">
-            <span>Date:</span> Tuesday, 3 February 2026
-          </div>
-          <div class="event-meta">
-            <span>Time:</span> (Muhurta / ceremony time)
-          </div>
-          <div class="event-meta">
-            <span>Venue:</span> Elysium Estate, Apta Road, near Lona Company, opposite Apta Station, Ladeewali Village, Raigad
-          </div>
-          <p class="event-note">
-            We request the honour of your presence and blessings as we exchange our vows and begin our married life.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Venue -->
-    <section id="venue">
-      <h2 class="section-title">Venue &amp; Travel</h2>
-      <p class="section-subtitle">
-        Elysium Estate · Apta Road · Opp. Apta Station · Ladeewali Village · Raigad, Maharashtra
-      </p>
-
-      <div class="two-column">
-        <div>
-          <div class="card">
-            <h3 style="margin-bottom:0.4rem;font-size:1.05rem;">By Train</h3>
-            <p class="muted">
-              The nearest railway station is Apta on the Panvel–Roha line. From Apta station, the venue is just across the road or a very short rickshaw ride away.
-            </p>
-
-            <h3 style="margin:1rem 0 0.4rem;font-size:1.05rem;">By Road</h3>
-            <p class="muted">
-              Elysium Estate is easily accessible by road from Mumbai, Navi Mumbai and Pune. 
-              Please allow extra time for traffic, especially on weekend or evening routes.
-            </p>
-
-            <h3 style="margin:1rem 0 0.4rem;font-size:1.05rem;">Parking</h3>
-            <p class="muted">
-              On‑site parking is available at the venue. We recommend arriving a little early for a comfortable check‑in and seating.
-            </p>
-          </div>
-        </div>
-        <div>
-          <div class="card">
-            <p class="muted">
-              Tap the map below to open directions on your phone. You can also search for “Elysium Estate Apta” in Google Maps for the latest route and traffic updates.
-            </p>
-            <div class="venue-map">
-              <!-- Replace the src with your exact Google Maps embed URL for Elysium Estate -->
-              <iframe
-                loading="lazy"
-                allowfullscreen
-                referrerpolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps/embed?pb="
-              ></iframe>
+          
+          <div class="events-list">
+            <div class="event">
+              <div class="event-time">Morning</div>
+              <div class="event-details">
+                <h4>Wedding Preparations</h4>
+                <div class="event-location">Elysium Estate</div>
+              </div>
+            </div>
+            
+            <div class="event">
+              <div class="event-time">Muhurta Time</div>
+              <div class="event-details">
+                <h4>Wedding Ceremony</h4>
+                <div class="event-location">Elysium Estate, Opposite Apta Station</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section id="faq">
-      <h2 class="section-title">FAQ</h2>
-      <p class="section-subtitle">
-        A few details to make your trip easier.
-      </p>
-      <div class="card">
-        <ul class="faq-list">
-          <li>
-            <div class="faq-q">Is there a dress code?</div>
-            <div class="faq-a">
-              Traditional Indian wear is preferred for all events. 
-              For the Sangeet, feel free to bring your most colourful and comfortable festive outfits.
-            </div>
-          </li>
-          <li>
-            <div class="faq-q">Are children welcome?</div>
-            <div class="faq-a">
-              Yes, children are warmly welcome at all our functions.
-            </div>
-          </li>
-          <li>
-            <div class="faq-q">What about gifts?</div>
-            <div class="faq-a">
-              Your presence and blessings are the greatest gifts. 
-              If you still wish to give us something, your good wishes and memories from the celebrations mean the most.
-            </div>
-          </li>
-          <li>
-            <div class="faq-q">Will there be vegetarian food?</div>
-            <div class="faq-a">
-              Yes, the menu will include a variety of vegetarian options.
-            </div>
-          </li>
-        </ul>
+    <!-- Venue & Travel -->
+    <section id="venue" class="section">
+      <h2 class="section-title">Venue & Travel</h2>
+      <p class="section-subtitle">Elysium Estate is perfectly located opposite Apta Railway Station</p>
+      
+      <div class="venue-grid">
+        <div class="venue-card">
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 1.5rem; color: var(--primary-dark);">Getting Here</h3>
+          
+          <div style="margin-bottom: 1.5rem;">
+            <h4 style="font-weight: 600; margin-bottom: 0.5rem;">By Train</h4>
+            <p style="color: var(--muted);">Apta Station (APTA) - Right opposite the venue. Panvel-Roha line.</p>
+          </div>
+          
+          <div style="margin-bottom: 1.5rem;">
+            <h4 style="font-weight: 600; margin-bottom: 0.5rem;">By Road</h4>
+            <ul style="color: var(--muted); padding-left: 1.25rem;">
+              <li>Mumbai: 2-2.5 hrs</li>
+              <li>Navi Mumbai/Panvel: 45-60 mins</li>
+              <li>Pune: 3-3.5 hrs</li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 style="font-weight: 600; margin-bottom: 0.5rem;">Parking</h4>
+            <p style="color: var(--muted);">Ample on-site parking available</p>
+          </div>
+        </div>
+        
+        <div class="venue-card">
+          <p style="color: var(--muted); margin-bottom: 1.5rem;">
+            Search "Elysium Estate Apta" on Google Maps for live directions
+          </p>
+          <iframe class="venue-map" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3811.927!2d73.120!3d18.55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMThCsDMzJzAwLjIiTiA3M8KwMDcnMTIuMCJF!5e0!3m2!1sen!2sin!4v1732800000000" 
+                  allowfullscreen="" 
+                  loading="lazy">
+          </iframe>
+        </div>
       </div>
     </section>
 
     <!-- RSVP -->
-    <section id="rsvp">
+    <section id="rsvp" class="section">
       <h2 class="section-title">RSVP</h2>
-      <p class="section-subtitle">
-        Kindly let us know if you will be able to join us.
-      </p>
-
-      <div class="card">
-        <form class="rsvp-form">
-          <div class="field">
-            <label for="name">Full name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required />
+      <p class="section-subtitle">Let us know if you'll join our celebration</p>
+      
+      <form class="rsvp-form">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        
+        <div class="form-group">
+          <label for="guests">Number of Guests</label>
+          <input type="number" id="guests" name="guests" min="1" max="10" value="1" />
+        </div>
+        
+        <div class="form-group">
+          <label>Events Attending</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="events[]" value="sakharpuda"> Sakharpuda</label>
+            <label><input type="checkbox" name="events[]" value="haldi"> Haldi</label>
+            <label><input type="checkbox" name="events[]" value="sangeet"> Sangeet</label>
+            <label><input type="checkbox" name="events[]" value="wedding" checked> Wedding</label>
           </div>
-
-          <div class="field">
-            <label for="guests">Number of guests (including you)</label>
-            <input type="number" id="guests" name="guests" min="1" max="10" value="1" />
-          </div>
-
-          <div class="field">
-            <label>Which events will you attend?</label>
-            <div class="event-checkboxes">
-              <label><input type="checkbox" name="events" value="sakharpuda" /> Sakharpuda (Engagement)</label>
-              <label><input type="checkbox" name="events" value="haldi" /> Haldi Ceremony</label>
-              <label><input type="checkbox" name="events" value="sangeet" /> Sangeet</label>
-              <label><input type="checkbox" name="events" value="wedding" /> Wedding Ceremony</label>
-            </div>
-          </div>
-
-          <div class="field">
-            <label for="diet">Dietary preferences / notes</label>
-            <textarea id="diet" name="diet" placeholder="Any food allergies or preferences?"></textarea>
-          </div>
-
-          <div class="field">
-            <label for="message">Message for the couple</label>
-            <textarea id="message" name="message" placeholder="Share your wishes for Ishant &amp; Krutika"></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-primary" style="justify-self:flex-start;">
-            Send RSVP
-          </button>
-
-          <p class="muted" style="font-size:0.8rem;margin-top:0.2rem;">
-            You can also RSVP directly by phone or message to the families.
-          </p>
-        </form>
-      </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="notes">Dietary Needs / Notes</label>
+          <textarea id="notes" name="notes" rows="3"></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.1rem; padding: 1.25rem;">
+          Send RSVP
+        </button>
+      </form>
     </section>
   </main>
 
-  <footer>
-    With love, Ishant &amp; Krutika · 3 February 2026
+  <footer class="footer">
+    <p>Krutika &amp; Ishant | 3 February 2026 | With love from Elysium Estate</p>
   </footer>
 </body>
 </html>
