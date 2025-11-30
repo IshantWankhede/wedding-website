@@ -3,13 +3,13 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f8f8f8;
-    color: #333;
+    background-color: #fdfaf6; /* A very light cream background */
+    color: #4a2d2d; /* A dark brown for text for better readability */
 }
 
 header {
-    background-color: #fff;
-    padding: 15px 0;
+    background-color: #ffffff;
+    padding: 10px 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     position: fixed;
     width: 100%;
@@ -28,10 +28,21 @@ nav {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between logo image and text */
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+.logo-text {
     font-family: 'Playfair Display', serif;
     font-size: 1.8em;
     font-weight: 700;
-    color: #5a7d7c; /* A shade of green/blue for tropical feel */
+    color: #d4af37; /* Gold color for the text logo */
 }
 
 nav ul {
@@ -47,13 +58,13 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #555;
+    color: #4a2d2d;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #8fa39e; /* Lighter shade for hover */
+    color: #c0392b; /* Red for hover */
 }
 
 .hero {
@@ -66,7 +77,7 @@ nav ul li a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Full viewport height */
+    min-height: 100vh;
     position: relative;
 }
 
@@ -77,7 +88,7 @@ nav ul li a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.4); /* Overlay for readability */
+    background: rgba(74, 45, 45, 0.5); /* Dark brown overlay */
     z-index: 1;
 }
 
@@ -113,8 +124,8 @@ nav ul li a:hover {
 .countdown p {
     font-size: 2.5em;
     font-weight: 700;
-    color: #ffe0b2; /* A warm, inviting color */
-    background-color: rgba(0, 0, 0, 0.3);
+    color: #d4af37; /* Gold color for countdown */
+    background-color: rgba(74, 45, 45, 0.4); /* Dark brown transparent background */
     padding: 10px 20px;
     border-radius: 5px;
     display: inline-block;
@@ -128,7 +139,7 @@ nav ul li a:hover {
 
 .couple-photo img {
     max-width: 300px;
-    border-radius: 50%; /* Circular image */
+    border-radius: 50%;
     border: 5px solid rgba(255, 255, 255, 0.8);
     box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
@@ -137,7 +148,7 @@ nav ul li a:hover {
     text-align: center;
     font-family: 'Playfair Display', serif;
     font-size: 2.5em;
-    color: #5a7d7c;
+    color: #a72626; /* Dark Red */
     margin-bottom: 40px;
 }
 
@@ -155,7 +166,7 @@ nav ul li a:hover {
 }
 
 .venue-card {
-    background-color: #f8f8f8;
+    background-color: #fdfaf6;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -169,7 +180,7 @@ nav ul li a:hover {
 .venue-card h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1.5em;
-    color: #5a7d7c;
+    color: #c0392b; /* Red */
     margin-top: 0;
 }
 
@@ -187,7 +198,7 @@ nav ul li a:hover {
 .map-container {
     position: relative;
     overflow: hidden;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    padding-top: 56.25%;
     margin-bottom: 15px;
 }
 
@@ -202,7 +213,7 @@ nav ul li a:hover {
 
 .map-link {
     display: inline-block;
-    background-color: #5a7d7c;
+    background-color: #a72626; /* Dark Red */
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -212,12 +223,12 @@ nav ul li a:hover {
 }
 
 .map-link:hover {
-    background-color: #4a6b6a;
+    background-color: #c0392b; /* Lighter Red */
 }
 
 .itinerary-section {
     padding: 60px 20px;
-    background-color: #f8f8f8;
+    background-color: #fdfaf6;
 }
 
 .timeline {
@@ -234,7 +245,7 @@ nav ul li a:hover {
     left: 50%;
     width: 2px;
     height: 100%;
-    background-color: #8fa39e;
+    background-color: #d4af37; /* Gold */
     transform: translateX(-50%);
 }
 
@@ -255,7 +266,7 @@ nav ul li a:hover {
     text-align: right;
     font-family: 'Playfair Display', serif;
     font-size: 1.2em;
-    color: #5a7d7c;
+    color: #a72626; /* Dark Red */
     align-self: center;
 }
 
@@ -295,7 +306,7 @@ nav ul li a:hover {
 
 .timeline-content h3 {
     font-family: 'Playfair Display', serif;
-    color: #5a7d7c;
+    color: #c0392b; /* Red */
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 1.4em;
@@ -313,10 +324,10 @@ nav ul li a:hover {
     transform: translate(-50%, -50%);
     width: 20px;
     height: 20px;
-    background-color: #5a7d7c;
+    background-color: #a72626; /* Dark Red */
     border-radius: 50%;
     z-index: 1;
-    border: 3px solid #f8f8f8;
+    border: 3px solid #fdfaf6;
 }
 
 /* Dress Code Section */
@@ -324,20 +335,6 @@ nav ul li a:hover {
     padding: 60px 20px;
     background-color: #fff;
     text-align: center;
-}
-
-.dresscode-section .intro-text,
-.dresscode-section .closing-text {
-    max-width: 800px;
-    margin: 0 auto 40px auto;
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: #555;
-}
-
-.dresscode-section .closing-text {
-    margin-top: 40px;
-    margin-bottom: 0;
 }
 
 .dresscode-container {
@@ -349,7 +346,7 @@ nav ul li a:hover {
 }
 
 .dresscode-event {
-    background-color: #f8f8f8;
+    background-color: #fdfaf6;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.05);
@@ -358,88 +355,24 @@ nav ul li a:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.dresscode-event:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-}
-
 .dresscode-event h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1.8em;
-    color: #5a7d7c;
+    color: #c0392b; /* Red */
     margin-top: 0;
     margin-bottom: 20px;
     border-bottom: 2px solid #e0e0e0;
     padding-bottom: 10px;
 }
 
-.dresscode-detail {
-    margin-bottom: 15px;
-}
-
-.dresscode-detail h4 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.1em;
-    color: #777;
-    margin-top: 0;
-    margin-bottom: 5px;
-    font-weight: 600;
-}
-
-.dresscode-detail p {
-    font-size: 1em;
-    line-height: 1.5;
-    color: #444;
-    margin: 0;
-}
-
 /* RSVP Section */
 .rsvp-section {
     padding: 60px 20px;
-    background-color: #f8f8f8;
-}
-
-.rsvp-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: #555;
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"] {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1em;
-}
-
-.radio-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.radio-group input[type="radio"] {
-    margin-right: 10px;
+    background-color: #fdfaf6;
 }
 
 .submit-btn {
-    background-color: #5a7d7c;
+    background-color: #a72626; /* Dark Red */
     color: white;
     padding: 12px 25px;
     border: none;
@@ -452,11 +385,11 @@ nav ul li a:hover {
 }
 
 .submit-btn:hover {
-    background-color: #4a6b6a;
+    background-color: #c0392b; /* Lighter Red */
 }
 
 footer {
-    background-color: #5a7d7c;
+    background-color: #a72626; /* Dark Red */
     color: white;
     text-align: center;
     padding: 20px;
@@ -465,74 +398,34 @@ footer {
     width: 100%;
 }
 
+/* Other shared styles from previous sections that need to be carried over */
+.rsvp-form { max-width: 600px; margin: 0 auto; background-color: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; font-weight: 600; margin-bottom: 8px; color: #555; }
+.form-group input[type="text"], .form-group input[type="email"] { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 1em; }
+.radio-group { display: flex; align-items: center; margin-bottom: 10px; }
+.radio-group input[type="radio"] { margin-right: 10px; }
+.dresscode-section .intro-text, .dresscode-section .closing-text { max-width: 800px; margin: 0 auto 40px auto; font-size: 1.1em; line-height: 1.6; color: #555; }
+.dresscode-section .closing-text { margin-top: 40px; margin-bottom: 0; }
+.dresscode-event:hover { transform: translateY(-5px); box-shadow: 0 6px 12px rgba(0,0,0,0.1); }
+.dresscode-detail { margin-bottom: 15px; }
+.dresscode-detail h4 { font-family: 'Montserrat', sans-serif; font-size: 1.1em; color: #777; margin-top: 0; margin-bottom: 5px; font-weight: 600; }
+.dresscode-detail p { font-size: 1em; line-height: 1.5; color: #444; margin: 0; }
+
 /* Responsive Design */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-    }
-
-    nav ul {
-        margin-top: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    nav ul li {
-        margin: 5px 15px;
-    }
-
-    .hero h1 {
-        font-size: 3em;
-    }
-
-    .countdown p {
-        font-size: 2em;
-    }
-
-    .couple-photo img {
-        max-width: 200px;
-    }
-
-    .venue-card {
-        width: 100%;
-        margin: 20px 0;
-    }
-
-    .timeline::before {
-        left: 20px;
-        transform: translateX(0);
-    }
-
-    .timeline-item {
-        flex-direction: column !important;
-        align-items: flex-start;
-        margin-bottom: 30px;
-    }
-
-    .timeline-date {
-        width: auto;
-        text-align: left !important;
-        padding-left: 40px;
-        margin-bottom: 10px;
-    }
-
-    .timeline-content {
-        width: calc(100% - 60px);
-        margin-left: 60px;
-    }
-
-    .timeline-item::after {
-        left: 20px;
-        transform: translate(-50%, -50%);
-    }
-
-    .timeline-content::before {
-        left: -10px !important;
-        border-right: 10px solid #fff !important;
-        border-left: none !important;
-    }
-
-    .dresscode-container {
-        grid-template-columns: 1fr;
-    }
+    nav { flex-direction: column; }
+    nav ul { margin-top: 15px; flex-wrap: wrap; justify-content: center; }
+    nav ul li { margin: 5px 15px; }
+    .hero h1 { font-size: 3em; }
+    .countdown p { font-size: 2em; }
+    .couple-photo img { max-width: 200px; }
+    .venue-card { width: 100%; margin: 20px 0; }
+    .timeline::before { left: 20px; transform: translateX(0); }
+    .timeline-item { flex-direction: column !important; align-items: flex-start; margin-bottom: 30px; }
+    .timeline-date { width: auto; text-align: left !important; padding-left: 40px; margin-bottom: 10px; }
+    .timeline-content { width: calc(100% - 60px); margin-left: 60px; }
+    .timeline-item::after { left: 20px; transform: translate(-50%, -50%); }
+    .timeline-content::before { left: -10px !important; border-right: 10px solid #fff !important; border-left: none !important; }
+    .dresscode-container { grid-template-columns: 1fr; }
 }
